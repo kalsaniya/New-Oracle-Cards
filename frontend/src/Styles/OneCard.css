@@ -1,0 +1,199 @@
+/* Main Container */
+.oneCard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 850px;
+  height: 510px;
+  margin: auto;
+  padding: 20px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-out, transform 0.6s ease-out;
+}
+
+.enter-animation {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Swiper Styles */
+.swiper {
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.swiper-slide {
+  /* width: 320px; */
+  width: 250px;
+  /* height: 420px; */
+  height: 330px;
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out;
+  margin-right: 20px !important;
+}
+
+/* Card Styles */
+.card {
+  /* width: 320px; */
+  width: 250px;
+  /* height: 420px; */
+  height: 330px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* Flip Card Container */
+.selected-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.flip-card {
+  position: relative;
+  /* width: 320px; */
+  width: 250px;
+  /* height: 420px; */
+  height: 330px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-face.front {
+  z-index: 2;
+}
+
+.card-face.back {
+  transform: rotateY(180deg);
+}
+
+/* Image Styling */
+.card-face img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the container */
+  border-radius: 12px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .oneCard-container {
+    width: 550px;
+    height: 650px;
+  }
+
+  .swiper-slide {
+    width: 280px;
+    height: 370px;
+    margin-right: 15px !important;
+  }
+
+  .card {
+    width: 280px;
+    height: 370px;
+  }
+}
+
+.shuffle-btn,
+.back-btn {
+  background-color: #5a2d91;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 36px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shuffle-btn:hover,
+.back-btn:hover,
+.save-btn:hover,
+.reset-back-btn:hover {
+  background-color: #4a2375;
+}
+
+.buttons_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 10px;
+}
+
+.save-btn {
+  background-color: #5a2d91;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reset-back-btn {
+  background-color: #5a2d91;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* .swiper-slide {
+  transition: transform 0.8s ease-in-out;
+}
+
+.rotate-clockwise {
+  animation: rotateClockwise 0.8s ease-in-out;
+}
+
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */

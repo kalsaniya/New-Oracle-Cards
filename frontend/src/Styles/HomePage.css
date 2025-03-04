@@ -1,0 +1,115 @@
+/* Header */
+
+/* Tarot Categories */
+.tarot-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.category {
+  background: #3e1a67;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.category:hover {
+  background: #5a2d91;
+  transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+}
+
+.about p {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Authors */
+.authors {
+  padding: 50px 20px;
+}
+
+.authors h2 {
+  margin-bottom: 20px;
+}
+
+.author {
+  display: inline-block;
+  background: #5a2d91;
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+.author:hover {
+  background: #7c3ddc;
+}
+
+/* Subscribe */
+.subscribe {
+  padding: 50px 20px;
+  background: #2a0e4a;
+}
+
+.subscribe input {
+  padding: 10px;
+  width: 250px;
+}
+
+.subscribe button {
+  background: #5a2d91;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.subscribe button:hover {
+  background: #7c3ddc;
+}
+
+/* Footer */
+/* .footer {
+  background: #250c4b;
+  padding: 20px;
+} */
+
+/* .homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.Outlet,
+.hero-section {
+  flex-grow: 1; 
+}
+
+.footer {
+  background: #250c4b;
+  padding: 20px;
+  text-align: center;
+} */
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+.Outlet {
+  flex-grow: 1; /* Allows the content to expand and push the footer down */
+}
+
+.footer {
+  background: #250c4b;
+  padding: 20px;
+  text-align: center;
+}

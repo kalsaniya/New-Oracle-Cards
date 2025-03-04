@@ -1,0 +1,10 @@
+.one-card-container {
+  opacity: 0;
+  transform: translateY(120px); /* Start lower for a better effect */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.enter-animation {
+  opacity: 1;
+  transform: translateY(0);
+}

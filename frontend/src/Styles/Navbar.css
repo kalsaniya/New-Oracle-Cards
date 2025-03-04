@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background: #250c4b;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: none;
+  font-family: "Architects Daughter", cursive;
+}
+
+.btn_logout {
+  background-color: #5a2d91;
+  color: white;
+  margin-left: 30px;
+}
+
+.btn_logout:hover {
+  background-color: #501b76;
+  color: #ff9eff;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: bold;
+  /* color: #e0c3fc; */
+  color: #ff9eff;
+  font-family: "Gwendolyn", cursive;
+  /* font-family: "Architects Daughter", cursive; */
+  padding: 8px 10px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #ff9eff;
+  margin: 10px 20px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav ul li {
+  position: relative;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #ff9eff;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+  font-family: "Architects Daughter", cursive;
+}
+
+.nav a.active {
+  border-bottom: 2px solid #ffcc00;
+}

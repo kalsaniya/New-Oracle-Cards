@@ -1,0 +1,151 @@
+.options-container {
+  /* border: 1px solid #e0e0e0; */
+  margin: 10px;
+  padding: 10px;
+  width: 98.3vw;
+  height: 82.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  gap: 10px;
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 5px;
+  padding: 10px;
+  width: 30%;
+  height: 60%;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.card_options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  /* border: 2px solid #250c4b; */
+  border-radius: 10px;
+  background-color: #5a2d91;
+  box-shadow: 0px 0px 5px rgba(200, 150, 255, 0.6);
+  color: white;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+  font-family: "Architects Daughter", cursive;
+}
+
+/* Apply animation for each option alternatively */
+.card_options:nth-child(odd) {
+  animation: slideFromLeft 0.8s ease-out forwards;
+}
+
+.card_options:nth-child(even) {
+  animation: slideFromRight 0.8s ease-out forwards;
+}
+
+/* Adding delay for a smooth staggered effect */
+.card_options:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card_options:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card_options:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.card_options:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* 🚀 Fix Hover Effect */
+.card_options:hover {
+  cursor: pointer;
+  transform: scale(
+    1.02
+  ) !important; /* Ensures hover works even after animation */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Exit animation - All cards move up */
+/* .exit-animation .card_options {
+  animation: slideUp 0.7s ease-in forwards;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 0;
+    transform: translateY(-120px);
+  }
+} */
+
+/* Slide Up Effect */
+/* @keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+}
+
+.card_options.slide-up {
+  animation: slideUp 0.6s ease-in-out forwards;
+} */
+
+/* Ultra-Smooth, Continuous Slide-Up */
+@keyframes slideUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 0.9;
+    transform: translateY(-40px);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateY(-90px);
+  }
+  80% {
+    opacity: 0.01;
+    transform: translateY(-150px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+}
+
+/* Apply animation only when exitAnimation is true */
+.card_options.slide-up {
+  animation: slideUp 0.6s ease-in forwards;
+}

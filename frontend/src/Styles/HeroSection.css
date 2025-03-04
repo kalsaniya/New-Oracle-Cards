@@ -1,0 +1,462 @@
+/* .home-page .welcome__card-loader {
+  position: absolute;
+  z-index: 3;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 3.6scubic-bezier(0.23, 1, 0.32, 1), opacity 2.1sease-in;
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.home-page .welcome__card-loader.-loaded {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.home-page .welcome__card-loader.-loaded .welcome__card-container {
+  animation-name: cardRotate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.home-page .welcome__card-container {
+  position: absolute;
+  z-index: 3;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 30%;
+  min-width: 8rem;
+  animation-name: cardRotate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  perspective: 1200px;
+}
+
+.home-page .welcome__card-loader.-loaded .the-card {
+  animation-name: cardRotateZ;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.home-page .welcome__card-container .the-card {
+  position: relative;
+  transform-style: preserve-3d;
+  animation-name: cardRotateZ;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.home-page .welcome__card-container .the-card__front {
+  position: absolute;
+  transform: rotateX(0) rotateY(180deg) scale(1) translateZ(0px);
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  border-radius: 0.35rem;
+  overflow: hidden;
+  padding: 4.68% 4.68%;
+  box-sizing: border-box;
+}
+
+.home-page .welcome__card-container .the-card__front video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.home-page .welcome__card-container .the-card__front .glare {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-image: linear-gradient(
+    to right,
+    rgba(245, 245, 245, 0) 0%,
+    rgba(245, 245, 245, 0.5019607843) 50%,
+    rgba(245, 245, 245, 0) 100%
+  );
+  animation-name: cardGlare;
+  animation-duration: 8s;
+  animation-delay: -6.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.home-page .welcome__card-container .the-card__front::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1.9%;
+  bottom: 1.9%;
+  left: 3.125%;
+  right: 3.125%;
+  background-image: linear-gradient(
+    to right bottom,
+    #d2a17d 20%,
+    #49432e 70%,
+    #d2a17d 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  border-radius: 0.25rem;
+  opacity: 0.2;
+}
+
+.home-page .welcome__card-container .the-card__border:nth-child(2) {
+  transform: rotateX(0) rotateY(0deg) scale(1) translateZ(0.1px);
+}
+
+.home-page .welcome__card-container .the-card__border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #786398;
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.home-page .welcome__card-container .the-card__back {
+  position: relative;
+  background-color: #1e1131;
+  transform: rotateX(0) rotateY(0deg) scale(1) translateZ(2.1px);
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+picture,
+img,
+svg {
+  display: block;
+  pointer-events: none;
+  width: 100%;
+}
+
+.home-page .welcome__card-container .the-card__back .glare {
+  position: absolute;
+  top: -10%;
+  left: 0%;
+  width: 100%;
+  height: 120%;
+  background-image: linear-gradient(
+    to right,
+    rgba(123, 71, 201, 0) 0%,
+    rgba(123, 71, 201, 0.5019607843) 50%,
+    rgba(123, 71, 201, 0) 100%
+  );
+  animation-name: cardGlareBack;
+  animation-duration: 8s;
+  animation-delay: -6.3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+} */
+
+/* ============================ChatGPT Source Code================================== */
+/* .home-page .welcome__card-loader {
+  position: absolute;
+  z-index: 3;
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 3.6s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 2.1s ease-in;
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.home-page .welcome__card-loader.-loaded {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@keyframes cardRotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.home-page .welcome__card-container {
+  position: relative;
+  width: 30%;
+  min-width: 8rem;
+  perspective: 1200px;
+}
+
+.home-page .welcome__card-container .the-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: cardRotate 8s infinite linear;
+}
+
+.home-page .welcome__card-container .the-card__front,
+.home-page .welcome__card-container .the-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.home-page .welcome__card-container .the-card__front {
+  background-color: #f5f5f5;
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.home-page .welcome__card-container .the-card__front video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.home-page .welcome__card-container .the-card__back {
+  background-color: #1e1131;
+  border-radius: 0.35rem;
+  transform: rotateY(180deg);
+} */
+
+/* .card-container {
+  perspective: 1000px;
+  width: 120px;
+  height: 200px;
+  margin: 20px auto;
+}
+
+.the-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCard 4s ease-in-out infinite;
+}
+
+@keyframes rotateCard {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.the-card__front,
+.the-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.the-card__back {
+  transform: rotateY(180deg);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+} */
+/* ==========================MAIN CSS=========================== */
+/* Hero Section */
+.hero-content {
+  margin: auto;
+  margin-top: 20px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.hero {
+  /* background: linear-gradient(135deg, #2e1457, #501b76); */
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 42px;
+  color: #ff9eff;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.card-container {
+  perspective: 1000px;
+  width: 210px;
+  height: 330px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.the-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(15deg) rotateX(5deg);
+  animation: rotateCard 4s ease-in-out infinite;
+}
+
+@keyframes rotateCard {
+  0% {
+    transform: rotateY(15deg) rotateX(5deg);
+  }
+  50% {
+    transform: rotateY(31deg) rotateX(-12deg);
+  }
+  100% {
+    transform: rotateY(375deg) rotateX(5deg);
+  }
+}
+
+.the-card__front,
+.the-card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.the-card__back {
+  transform: rotateY(180deg);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0) 70%);
+  border-radius: 50%;
+  filter: blur(15px);
+  transform: translate(-50%, -50%);
+  animation: glowRotate 6s linear infinite;
+}
+
+@keyframes glowRotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ==========================MAIN CSS=========================== */
+/* Card Circle */
+
+.card-circle {
+  position: relative;
+  width: 800px; /* Adjust width as needed */
+  height: 400px; /* Half-circle height */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* .card-wrapper {
+  position: absolute;
+  width: 120px; 
+  height: 180px;
+  transform-origin: center bottom;
+} */
+
+.the-card-lobby {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-container-lobby {
+  /* position: relative; */
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-axis {
+  /* position: absolute; */
+  width: 8rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s cubic-bezier(0.3, 0, 0.14, 1);
+}
+
+.arc-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust for card height */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.card-wrapper {
+  position: absolute;
+  width: 80px; /* Adjust card width */
+  height: 120px; /* Adjust card height */
+  transform-origin: center bottom; /* Rotates around the bottom edge */
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
